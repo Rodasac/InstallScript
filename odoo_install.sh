@@ -50,7 +50,7 @@ apt-get upgrade -y
 # Install PostgreSQL Server
 #--------------------------------------------------
 echo -e "\n---- Install PostgreSQL Server ----"
-apt-get install postgresql -y
+apt-get install postgresql-9.4 postgresql-client-9.4 -y
 
 echo -e "\n---- Creating the ODOO PostgreSQL User  ----"
 su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
